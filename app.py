@@ -17,7 +17,7 @@ def hello_world():
     output = csv.to_csv(encoding="utf-8")
     blobService = BlockBlobService(account_name=storage_account_name, account_key=storage_key)
     blobService.create_blob_from_text(container_name, 'data.csv', output)
-    return {'status_code': 200}
+    return {'status_code': 200, 'msg': 'done'}
 
 
 if __name__ == '__main__':
